@@ -8,6 +8,8 @@ Use Python 3.10 or newer. From this folder:
 python -m pip install -r requirements.txt
 ```
 
+Put the IndicWikiQA, NonExi, and MCQ spreadsheets for the desired language in the `raw` folder before running a test on these datasets.
+
 The included ask files run on Windows with an NVIDIA GPU as CUDA device 0 and a driver that can run CUDA 12.4. The first run downloads a llama.cpp build and the model weights into your home directory. Sarvam is a 30B model in six files, Param is 17B, and Navarasa is 7B. Navarasa must fit entirely on the GPU. One language command reads every row of the sheets it runs, and a chain-of-thought reply can be up to 4096 tokens. Details for other systems and GPUs are in [Operating system and GPU](#operating-system-and-gpu).
 
 ## Files
