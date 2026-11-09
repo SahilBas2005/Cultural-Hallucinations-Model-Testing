@@ -84,14 +84,12 @@ Prompt text is the four constants at the top of `test_model.py`. MCQ rows use th
 ## Command line
 
 ```
-python test_model.py <model> <language> [english]
+python test_model.py <model> <language>
 ```
 
 `model` chooses which ask function runs. The current names are `param`, `sarvam`, and `navarasa`. Matching is case-insensitive. Each name also selects the output folder registered next to that function in `_MODEL_RUNNERS`.
 
 `language` is one language, or `all`. `all` runs Gujarati, Marathi, Punjabi, Telugu, and Urdu in that order. The active language is stored in `LANGUAGE` and is used in the CSV file name.
-
-`english` is optional. Without it, the script calls `generate_outputs`. With it, the script runs English zero-shot only, on MCQ, NonExi, and the combined NonExi+WikiQA set, and those CSVs go in a `Temperature (0)` folder.
 
 ## Changing `generate_outputs`
 
